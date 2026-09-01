@@ -202,3 +202,32 @@ The project can be further improved by adding:
 - Customer profile management
 - Sales and order reports
 - Cloud-based data storage
+
+# Dashboard
+<img width="1365" height="727" alt="dashboard" src="https://github.com/user-attachments/assets/0c47e744-7f03-4b89-8d6c-3791f2f585b8" />
+
+# Shop
+- <img width="1118" height="691" alt="shop 1" src="https://github.com/user-attachments/assets/586ac32f-3f17-4676-820b-c73cdffc6920" />
+- <img width="1097" height="616" alt="shop 2" src="https://github.com/user-attachments/assets/691eddf0-4569-49cf-8cad-c6a3af4cb06d" />
+
+# By Search
+<img width="1099" height="670" alt="search" src="https://github.com/user-attachments/assets/3e74341d-1796-4047-b39f-dc28d2b22ab8" />
+
+# Add to cart
+<img width="425" height="330" alt="add to cart" src="https://github.com/user-attachments/assets/31ee5f7e-1058-4dfb-a214-9eb51e694332" />
+<img width="414" height="292" alt="successfull" src="https://github.com/user-attachments/assets/1f39aac0-df95-4990-9212-d8354cfaeb9d" />
+
+# Shopping Cart Dashboard
+<img width="1362" height="727" alt="shopping cart" src="https://github.com/user-attachments/assets/80eda680-0b67-492f-964f-9d38fa6d742a" />
+
+# Checkout details
+<img width="650" height="706" alt="checkout" src="https://github.com/user-attachments/assets/396607cf-853b-4e51-881c-4ebc584c74ab" />
+<img width="487" height="419" alt="confirm" src="https://github.com/user-attachments/assets/6da25c6a-a0cc-478e-b8f0-fe7f9e9ab77b" />
+<img width="486" height="394" alt="confirm 1" src="https://github.com/user-attachments/assets/81a91b33-2c1e-4be2-905c-6792e26e127a" />
+
+# Order Dashboard
+<img width="1365" height="724" alt="your order" src="https://github.com/user-attachments/assets/248f0467-7589-4d85-9fcc-cdb94a8ff893" />
+
+## After order home page updates
+<img width="1096" height="408" alt="dashboard update" src="https://github.com/user-attachments/assets/6c7a49fd-4571-42d6-a83d-f8fca09c1a3c" />
+
