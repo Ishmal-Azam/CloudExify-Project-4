@@ -28,10 +28,7 @@ import javax.swing.border.EmptyBorder;
 
 public class ECommerceApp extends JFrame {
 
-    // =========================================================
     // COLORS
-    // =========================================================
-
     private static final Color BG = new Color(12, 13, 20);
     private static final Color SIDEBAR = new Color(17, 18, 28);
     private static final Color CARD = new Color(24, 25, 37);
@@ -48,20 +45,14 @@ public class ECommerceApp extends JFrame {
     private static final Color RED = new Color(235, 92, 105);
     private static final Color GOLD = new Color(245, 190, 70);
 
-    // =========================================================
     // DATA
-    // =========================================================
-
     private StoreService storeService;
     private ShoppingCart cart;
     private Customer customer;
     private String currentCategory = "All";
     private JButton selectedMenuButton;
 
-    // =========================================================
     // MAIN UI
-    // =========================================================
-
     private JPanel contentPanel;
     private CardLayout cardLayout;
 
@@ -74,10 +65,7 @@ public class ECommerceApp extends JFrame {
     private JLabel homeCartCount;
     private JLabel homeOrderCount;
 
-    // =========================================================
     // CONSTRUCTOR
-    // =========================================================
-
     public ECommerceApp() {
 
         storeService = new StoreService();
@@ -98,10 +86,8 @@ public class ECommerceApp extends JFrame {
     public void addOrder(Order order) {
     storeService.addOrder(order);
 }
-    // =========================================================
+    
     // FRAME
-    // =========================================================
-
     private void setupFrame() {
 
         setTitle("ECOMMERCE | ONLINE SHOPPING APP");
@@ -121,10 +107,7 @@ public class ECommerceApp extends JFrame {
         setLayout(new BorderLayout());
     }
 
-    // =========================================================
     // MAIN INTERFACE
-    // =========================================================
-
     private void buildInterface() {
 
     setLayout(new BorderLayout());
@@ -142,7 +125,6 @@ public class ECommerceApp extends JFrame {
     );
 
     cardLayout = new CardLayout();
-
     contentPanel = new JPanel(cardLayout);
     contentPanel.setBackground(BG);
 
@@ -182,10 +164,7 @@ public class ECommerceApp extends JFrame {
     );
 }
 
-    // =========================================================
     // SIDEBAR
-    // =========================================================
-
     private JPanel createSidebar() {
 
         JPanel sidebar =
@@ -206,7 +185,6 @@ public class ECommerceApp extends JFrame {
                 30, 18, 20, 18));
 
         // LOGO
-
         JPanel logoPanel =
                 new JPanel();
 
@@ -263,7 +241,6 @@ public class ECommerceApp extends JFrame {
         sidebar.add(subtitle);
 
         // MENU LABEL
-
         JLabel menuLabel =
                 new JLabel("EXPLORE");
 
@@ -283,7 +260,6 @@ public class ECommerceApp extends JFrame {
         sidebar.add(menuLabel);
 
         // BUTTONS
-
         JButton home =
                 createMenuButton(
                         "⌂",
@@ -363,7 +339,6 @@ public class ECommerceApp extends JFrame {
                 Box.createVerticalGlue());
 
         // LOWER MENU
-
         JLabel accountLabel =
                 new JLabel("ACCOUNT");
 
@@ -427,7 +402,6 @@ public class ECommerceApp extends JFrame {
                 new Dimension(
                         195,
                         45));
-
         button.setMaximumSize(
                 new Dimension(
                         Integer.MAX_VALUE,
@@ -437,19 +411,15 @@ public class ECommerceApp extends JFrame {
                 SIDEBAR);
 
         button.setForeground(MUTED);
-
         button.setFocusPainted(false);
-
         button.setBorder(
                 BorderFactory.createEmptyBorder(
                         5, 10, 5, 10));
 
         JLabel iconLabel =
                 new JLabel(icon);
-
         iconLabel.setPreferredSize(
                 new Dimension(35, 30));
-
         iconLabel.setForeground(
                 PURPLE_LIGHT);
 
@@ -490,7 +460,6 @@ public class ECommerceApp extends JFrame {
         JPanel panel =
                 new JPanel(
                         new BorderLayout());
-
         panel.setMaximumSize(
                 new Dimension(
                         Integer.MAX_VALUE,
@@ -516,9 +485,7 @@ public class ECommerceApp extends JFrame {
                 new Dimension(38, 38));
 
         avatar.setOpaque(true);
-
         avatar.setBackground(PURPLE);
-
         avatar.setForeground(WHITE);
 
         avatar.setFont(
@@ -526,7 +493,6 @@ public class ECommerceApp extends JFrame {
                         "SansSerif",
                         Font.BOLD,
                         16));
-
         JLabel name =
                 new JLabel(
                         "<html><b>Guest Customer</b>"
@@ -538,7 +504,6 @@ public class ECommerceApp extends JFrame {
         panel.add(
                 avatar,
                 BorderLayout.WEST);
-
         panel.add(
                 name,
                 BorderLayout.CENTER);
@@ -546,10 +511,7 @@ public class ECommerceApp extends JFrame {
         return panel;
     }
 
-    // =========================================================
     // TOP BAR
-    // =========================================================
-
     private JPanel createTopBar() {
 
         JPanel top =
@@ -601,11 +563,8 @@ public class ECommerceApp extends JFrame {
                         40));
 
         searchField.setBackground(INPUT);
-
         searchField.setForeground(WHITE);
-
         searchField.setCaretColor(WHITE);
-
         searchField.setBorder(
                 BorderFactory.createCompoundBorder(
                         BorderFactory.createLineBorder(
@@ -742,10 +701,7 @@ public class ECommerceApp extends JFrame {
         return button;
     }
 
-    // =========================================================
     // HOME PAGE
-    // =========================================================
-
     private JPanel createHomePage() {
 
         JPanel page =
@@ -884,11 +840,9 @@ public class ECommerceApp extends JFrame {
                         "SansSerif",
                         Font.BOLD,
                         32));
-
         heading.setBorder(
                 new EmptyBorder(
                         10, 0, 5, 0));
-
         JLabel description =
                 new JLabel(
                         "Explore our collection of products "
@@ -905,10 +859,8 @@ public class ECommerceApp extends JFrame {
        JButton explore =
         createPrimaryButton(
                 "Explore Collection  →");
-
         explore.setAlignmentX(
                 LEFT_ALIGNMENT);
-
         explore.addActionListener(
                 e -> {
 
@@ -918,11 +870,9 @@ public class ECommerceApp extends JFrame {
 
             refreshProducts();
         });
-
         left.add(small);
         left.add(heading);
         left.add(description);
-
         left.add(
                 Box.createVerticalStrut(18));
 
@@ -933,7 +883,6 @@ public class ECommerceApp extends JFrame {
                 BorderLayout.WEST);
 
         // RIGHT DECORATION
-
         JPanel visual =
                 new JPanel(
                         new GridBagLayout());
@@ -952,14 +901,12 @@ public class ECommerceApp extends JFrame {
 
         circle.setHorizontalAlignment(
                 SwingConstants.CENTER);
-
         circle.setPreferredSize(
                 new Dimension(
                         125,
                         125));
 
         circle.setOpaque(true);
-
         circle.setBackground(
                 PURPLE);
 
@@ -976,14 +923,10 @@ public class ECommerceApp extends JFrame {
         hero.add(
                 visual,
                 BorderLayout.EAST);
-
         return hero;
     }
 
-    // =========================================================
     // STATS
-    // =========================================================
-
     private JPanel createStats() {
 
         JPanel panel =
@@ -1002,12 +945,10 @@ public class ECommerceApp extends JFrame {
                                 storeService
                                         .getProducts()
                                         .size()));
-
         homeCartCount =
                 new JLabel(
                         String.valueOf(
                                 cart.getTotalItems()));
-
         homeOrderCount =
                 new JLabel(
                         String.valueOf(
@@ -1110,10 +1051,7 @@ public class ECommerceApp extends JFrame {
         return panel;
     }
 
-    // =========================================================
     // SHOP PAGE
-    // =========================================================
-
     private JPanel createShopPage() {
 
         JPanel page =
@@ -1280,10 +1218,8 @@ public class ECommerceApp extends JFrame {
                     // Refresh products
                     refreshProducts();
                 });
-
         bar.add(button);
     }
-
     return bar;
 }
 
@@ -1291,10 +1227,8 @@ public class ECommerceApp extends JFrame {
 
     JButton button =
             new JButton();
-
     button.setLayout(
             new BorderLayout());
-
     button.setPreferredSize(
             new Dimension(
                     195,
@@ -1307,25 +1241,19 @@ public class ECommerceApp extends JFrame {
 
     button.setBackground(
             SIDEBAR);
-
     button.setForeground(
             MUTED);
-
     button.setFocusPainted(false);
-
     button.setBorder(
             BorderFactory.createEmptyBorder(
                     5, 10, 5, 10));
 
     JLabel iconLabel =
             new JLabel(icon);
-
     iconLabel.setPreferredSize(
             new Dimension(35, 30));
-
     iconLabel.setForeground(
             PURPLE_LIGHT);
-
     iconLabel.setFont(
             new Font(
                     "SansSerif",
@@ -1342,7 +1270,6 @@ public class ECommerceApp extends JFrame {
                     "SansSerif",
                     Font.BOLD,
                     13));
-
     button.add(
             iconLabel,
             BorderLayout.WEST);
@@ -1357,7 +1284,6 @@ public class ECommerceApp extends JFrame {
 
 
     // SELECTED BUTTON EFFECT
-
     button.addActionListener(
             e -> {
 
@@ -1412,10 +1338,7 @@ public class ECommerceApp extends JFrame {
     return button;
 }
 
-    // =========================================================
     // PRODUCT CARDS
-    // =========================================================
-
     private JPanel createProductCard(
             Product product) {
 
@@ -1436,7 +1359,6 @@ public class ECommerceApp extends JFrame {
                                 15, 15, 15, 15)));
 
         // PRODUCT VISUAL
-
         JPanel visual =
                 new JPanel(
                         new GridBagLayout());
@@ -1454,7 +1376,6 @@ public class ECommerceApp extends JFrame {
                 new JLabel(
                         product.getProductType()
                                 .toUpperCase());
-
         type.setForeground(WHITE);
 
         type.setFont(
@@ -1470,7 +1391,6 @@ public class ECommerceApp extends JFrame {
                 BorderLayout.NORTH);
 
         // DETAILS
-
         JPanel details =
                 new JPanel();
 
@@ -1555,7 +1475,6 @@ public class ECommerceApp extends JFrame {
                 BorderLayout.CENTER);
 
         // BOTTOM BUTTON
-
         JPanel bottom =
                 new JPanel(
                         new BorderLayout());
@@ -1610,11 +1529,8 @@ public class ECommerceApp extends JFrame {
         return new Color(
                 40, 40, 55);
     }
-
-    // =========================================================
+    
     // REFRESH PRODUCTS
-    // =========================================================
-
    private void refreshProducts() {
 
     if (productsGrid == null) {
@@ -1725,10 +1641,10 @@ public class ECommerceApp extends JFrame {
                 result.add(product);
             }
         }
-
         return result;
     }
-
+    
+    //SEARCH PRODUCT
     private void searchProducts() {
 
     showPage("SHOP");
@@ -1736,10 +1652,7 @@ public class ECommerceApp extends JFrame {
     refreshProducts();
 }
 
-    // =========================================================
     // CART PAGE
-    // =========================================================
-
     private JPanel createCartPage() {
 
         JPanel page =
@@ -1753,7 +1666,6 @@ public class ECommerceApp extends JFrame {
         page.setBorder(
                 new EmptyBorder(
                         5, 25, 25, 25));
-
         JLabel title =
                 new JLabel(
                         "Your Shopping Cart");
@@ -1765,7 +1677,6 @@ public class ECommerceApp extends JFrame {
                         "SansSerif",
                         Font.BOLD,
                         25));
-
         page.add(
                 title,
                 BorderLayout.NORTH);
@@ -1807,22 +1718,18 @@ public class ECommerceApp extends JFrame {
 
             for (CartItem item :
                     cart.getItems()) {
-
                 list.add(
                         createCartItem(
                                 item));
-
                 list.add(
                         Box.createVerticalStrut(
                                 10));
             }
         }
-
         JScrollPane scroll =
                 new JScrollPane(list);
 
         scroll.setBorder(null);
-
         scroll.getViewport()
                 .setBackground(BG);
 
@@ -1848,14 +1755,12 @@ public class ECommerceApp extends JFrame {
                         new BorderLayout(
                                 15,
                                 10));
-
         panel.setMaximumSize(
                 new Dimension(
                         Integer.MAX_VALUE,
                         105));
 
         panel.setBackground(CARD);
-
         panel.setBorder(
                 BorderFactory.createCompoundBorder(
                         BorderFactory.createLineBorder(
@@ -1863,7 +1768,6 @@ public class ECommerceApp extends JFrame {
                                         45, 46, 60)),
                         new EmptyBorder(
                                 15, 15, 15, 15)));
-
         JPanel icon =
                 new JPanel(
                         new GridBagLayout());
@@ -1884,9 +1788,7 @@ public class ECommerceApp extends JFrame {
                                 .substring(
                                         0,
                                         1));
-
         type.setForeground(WHITE);
-
         type.setFont(
                 new Font(
                         "SansSerif",
@@ -1934,7 +1836,6 @@ public class ECommerceApp extends JFrame {
                         "SansSerif",
                         Font.PLAIN,
                         12));
-
         JLabel subtotal =
                 new JLabel(
                         "Rs. "
@@ -1995,7 +1896,6 @@ public class ECommerceApp extends JFrame {
                 new Dimension(
                         280,
                         0));
-
         panel.setBackground(CARD);
 
         panel.setBorder(
@@ -2013,7 +1913,6 @@ public class ECommerceApp extends JFrame {
         JLabel title =
                 new JLabel(
                         "Order Summary");
-
         title.setForeground(WHITE);
 
         title.setFont(
@@ -2021,7 +1920,6 @@ public class ECommerceApp extends JFrame {
                         "SansSerif",
                         Font.BOLD,
                         19));
-
         JLabel items =
                 new JLabel(
                         "Items: "
@@ -2032,14 +1930,12 @@ public class ECommerceApp extends JFrame {
         items.setBorder(
                 new EmptyBorder(
                         20, 0, 5, 0));
-
         JLabel total =
                 new JLabel(
                         "Rs. "
                         + String.format(
                                 "%.0f",
                                 cart.getTotal()));
-
         total.setForeground(WHITE);
 
         total.setFont(
@@ -2064,11 +1960,9 @@ public class ECommerceApp extends JFrame {
                             customer,
                             cart
                     );
-
             dialog.setVisible(true);
         }
-);
-
+  );
         JButton clear =
                 createSmallButton(
                         "Clear Cart");
@@ -2082,10 +1976,8 @@ public class ECommerceApp extends JFrame {
                     cart.clear();
 
                     updateCartBadge();
-
                     showPage("CART");
                 });
-
         panel.add(title);
         panel.add(items);
         panel.add(
@@ -2093,7 +1985,6 @@ public class ECommerceApp extends JFrame {
         panel.add(
                 new JLabel(
                         "Total"));
-
         JLabel totalCaption =
                 new JLabel(
                         "Final amount");
@@ -2102,24 +1993,17 @@ public class ECommerceApp extends JFrame {
 
         panel.add(totalCaption);
         panel.add(total);
-
         panel.add(
                 Box.createVerticalStrut(25));
-
         panel.add(checkout);
-
         panel.add(
                 Box.createVerticalStrut(10));
-
         panel.add(clear);
 
         return panel;
     }
 
-    // =========================================================
     // ORDERS
-    // =========================================================
-
     private JPanel createOrdersPage() {
 
         JPanel page =
@@ -2127,17 +2011,13 @@ public class ECommerceApp extends JFrame {
                         new BorderLayout(
                                 15,
                                 15));
-
         page.setBackground(BG);
-
         page.setBorder(
                 new EmptyBorder(
                         5, 25, 25, 25));
-
         JLabel title =
                 new JLabel(
                         "Your Orders");
-
         title.setForeground(WHITE);
 
         title.setFont(
@@ -2159,7 +2039,6 @@ public class ECommerceApp extends JFrame {
                 new BoxLayout(
                         list,
                         BoxLayout.Y_AXIS));
-
         if (storeService
                 .getOrders()
                 .isEmpty()) {
@@ -2199,13 +2078,11 @@ public class ECommerceApp extends JFrame {
                 list.add(
                         createOrderCard(
                                 order));
-
                 list.add(
                         Box.createVerticalStrut(
                                 10));
             }
         }
-
         JScrollPane scroll =
                 new JScrollPane(list);
 
@@ -2234,7 +2111,6 @@ public class ECommerceApp extends JFrame {
                         115));
 
         panel.setBackground(CARD);
-
         panel.setBorder(
                 BorderFactory.createCompoundBorder(
                         BorderFactory.createLineBorder(
@@ -2249,7 +2125,6 @@ public class ECommerceApp extends JFrame {
                         + order.getOrderID());
 
         id.setForeground(PURPLE_LIGHT);
-
         id.setFont(
                 new Font(
                         "SansSerif",
@@ -2264,7 +2139,6 @@ public class ECommerceApp extends JFrame {
                                 order.getTotalAmount()));
 
         amount.setForeground(WHITE);
-
         amount.setFont(
                 new Font(
                         "SansSerif",
@@ -2288,7 +2162,6 @@ public class ECommerceApp extends JFrame {
                 new JPanel();
 
         left.setOpaque(false);
-
         left.setLayout(
                 new BoxLayout(
                         left,
@@ -2305,21 +2178,17 @@ public class ECommerceApp extends JFrame {
                         order.getItems()
                                 .size()
                                 + " product(s)"));
-
         JLabel products =
                 (JLabel) left.getComponent(
                         left.getComponentCount() - 1);
 
         products.setForeground(MUTED);
-
         panel.add(
                 left,
                 BorderLayout.WEST);
-
         panel.add(
                 amount,
                 BorderLayout.CENTER);
-
         panel.add(
                 status,
                 BorderLayout.EAST);
@@ -2327,10 +2196,7 @@ public class ECommerceApp extends JFrame {
         return panel;
     }
 
-    // =========================================================
     // ADD PRODUCT
-    // =========================================================
-
     private void addProduct(Product product) {
 
     final JDialog dialog =
@@ -2343,7 +2209,6 @@ public class ECommerceApp extends JFrame {
     dialog.setLocationRelativeTo(this);
     dialog.setResizable(false);
 
-
     JPanel main =
             new JPanel(
                     new BorderLayout());
@@ -2354,9 +2219,7 @@ public class ECommerceApp extends JFrame {
             new EmptyBorder(
                     25, 25, 25, 25));
 
-
-    // ================= HEADER =================
-
+    // HEADER 
     JPanel header =
             new JPanel();
 
@@ -2366,50 +2229,34 @@ public class ECommerceApp extends JFrame {
                     BoxLayout.Y_AXIS));
 
     header.setBackground(BG);
-
-
     JLabel title =
             new JLabel(
                     "ADD TO CART");
-
     title.setForeground(WHITE);
-
     title.setFont(
             new Font(
                     "SansSerif",
                     Font.BOLD,
                     22));
-
-
     JLabel productName =
             new JLabel(
                     product.getName());
-
     productName.setForeground(
             PURPLE_LIGHT);
-
     productName.setFont(
             new Font(
                     "SansSerif",
                     Font.BOLD,
                     14));
-
-
     header.add(title);
-
     header.add(
             Box.createVerticalStrut(5));
-
     header.add(productName);
-
-
     main.add(
             header,
             BorderLayout.NORTH);
 
-
-    // ================= CENTER =================
-
+    // CENTER 
     JPanel center =
             new JPanel();
 
@@ -2419,11 +2266,9 @@ public class ECommerceApp extends JFrame {
                     BoxLayout.Y_AXIS));
 
     center.setBackground(CARD);
-
     center.setBorder(
             new EmptyBorder(
                     20, 20, 20, 20));
-
 
     JLabel quantityLabel =
             new JLabel(
@@ -2437,12 +2282,10 @@ public class ECommerceApp extends JFrame {
                     Font.BOLD,
                     13));
 
-
     center.add(quantityLabel);
 
     center.add(
             Box.createVerticalStrut(12));
-
 
     JTextField quantityField =
             new JTextField("1");
@@ -2475,17 +2318,13 @@ public class ECommerceApp extends JFrame {
                     Integer.MAX_VALUE,
                     45));
 
-
     center.add(quantityField);
-
 
     main.add(
             center,
             BorderLayout.CENTER);
 
-
-    // ================= BUTTONS =================
-
+    // BUTTONS 
     JPanel buttons =
             new JPanel(
                     new FlowLayout(
@@ -2494,51 +2333,45 @@ public class ECommerceApp extends JFrame {
                             0));
 
     buttons.setBackground(BG);
-
-
     JButton cancel =
             new JButton(
                     "CANCEL");
 
     cancel.setBackground(CARD);
-cancel.setForeground(MUTED);
-cancel.setFocusPainted(false);
-cancel.setBorder(
+    cancel.setForeground(MUTED);
+    cancel.setFocusPainted(false);
+    cancel.setBorder(
         BorderFactory.createLineBorder(
                 new Color(55, 56, 70)));
-cancel.setFont(
+    cancel.setFont(
         new Font("SansSerif", Font.BOLD, 12));
-cancel.setCursor(
+    cancel.setCursor(
         new Cursor(Cursor.HAND_CURSOR));
 
     cancel.addActionListener(
             e -> dialog.dispose());
-
 
     JButton confirm =
             new JButton(
                     "ADD TO CART");
 
     confirm.setBackground(PURPLE);
-confirm.setForeground(WHITE);
-confirm.setFocusPainted(false);
-confirm.setBorderPainted(false);
-confirm.setFont(
+    confirm.setForeground(WHITE); 
+    confirm.setFocusPainted(false);
+    confirm.setBorderPainted(false);
+    confirm.setFont(
         new Font("SansSerif", Font.BOLD, 12));
-confirm.setCursor(
+    confirm.setCursor(
         new Cursor(Cursor.HAND_CURSOR));
 
     confirm.addActionListener(
             e -> {
-
                 try {
-
                     int quantity =
                             Integer.parseInt(
                                     quantityField
                                             .getText()
                                             .trim());
-
 
                     if (quantity <= 0) {
 
@@ -2551,40 +2384,27 @@ confirm.setCursor(
                         return;
                     }
 
-
-                    // ================= ADD PRODUCT =================
-
+        // ADD PRODUCT 
                     cart.addProduct(
                             product,
                             quantity);
-
-
                     updateCartBadge();
 
-
-                    // ================= SUCCESS =================
-
-                    showAddedToCartDialog(
+        // SUCCESS 
+        showAddedToCartDialog(
         dialog,
         product,
         quantity
-);
+     );
 
-dialog.dispose();
-
-
+     dialog.dispose();
                 } catch (NumberFormatException ex) {
-
                     JOptionPane.showMessageDialog(
                             dialog,
-
                             "Please enter a valid number.",
-
                             "Invalid Quantity",
 
                             JOptionPane.WARNING_MESSAGE);
-
-
                 } catch (OutOfStockException ex) {
 
                     JOptionPane.showMessageDialog(
@@ -2598,11 +2418,8 @@ dialog.dispose();
                 }
             });
 
-
     buttons.add(cancel);
     buttons.add(confirm);
-
-
     main.add(
             buttons,
             BorderLayout.SOUTH);
@@ -2616,7 +2433,6 @@ dialog.dispose();
         JDialog parent,
         Product product,
         int quantity) {
-
     JDialog successDialog =
             new JDialog(
                     parent,
@@ -2626,70 +2442,50 @@ dialog.dispose();
     successDialog.setSize(
             430,
             300);
-
     successDialog.setLocationRelativeTo(
             parent);
 
     successDialog.setResizable(false);
-
-
     JPanel main =
             new JPanel(
                     new BorderLayout());
-
     main.setBackground(BG);
-
     main.setBorder(
             new EmptyBorder(
                     25, 25, 25, 25));
 
-
-    // ================= ICON =================
-
+    // ICON
     JLabel icon =
             new JLabel("✓");
 
     icon.setHorizontalAlignment(
             SwingConstants.CENTER);
-
     icon.setForeground(WHITE);
-
     icon.setBackground(PURPLE);
-
     icon.setOpaque(true);
-
     icon.setFont(
             new Font(
                     "SansSerif",
                     Font.BOLD,
                     26));
-
     icon.setPreferredSize(
             new Dimension(
                     55,
                     55));
-
-
     JPanel iconPanel =
             new JPanel(
                     new FlowLayout(
                             FlowLayout.CENTER));
 
     iconPanel.setBackground(BG);
-
     iconPanel.add(icon);
-
-
     main.add(
             iconPanel,
             BorderLayout.NORTH);
 
-
-    // ================= MESSAGE =================
-
+    // MESSAGE 
     JPanel center =
             new JPanel();
-
     center.setLayout(
             new BoxLayout(
                     center,
@@ -2697,23 +2493,18 @@ dialog.dispose();
 
     center.setBackground(BG);
 
-
     JLabel title =
             new JLabel(
                     "Added to Cart!");
 
     title.setAlignmentX(
         0.5f);
-
     title.setForeground(WHITE);
-
     title.setFont(
             new Font(
                     "SansSerif",
                     Font.BOLD,
                     21));
-
-
     JLabel productLabel =
             new JLabel(
                     product.getName()
@@ -2722,7 +2513,6 @@ dialog.dispose();
 
     productLabel.setAlignmentX(
             0.5f);
-
     productLabel.setForeground(
             PURPLE_LIGHT);
 
@@ -2731,101 +2521,69 @@ dialog.dispose();
                     "SansSerif",
                     Font.BOLD,
                     13));
-
-
     JLabel message =
             new JLabel(
                     "The item has been added successfully.");
-
     message.setAlignmentX(
             0.5f);
 
     message.setForeground(MUTED);
-
     message.setFont(
             new Font(
                     "SansSerif",
                     Font.PLAIN,
                     11));
 
-
     center.add(
             title);
-
     center.add(
             Box.createVerticalStrut(7));
-
     center.add(
             productLabel);
-
     center.add(
             Box.createVerticalStrut(5));
-
     center.add(
             message);
-
-
     main.add(
             center,
             BorderLayout.CENTER);
 
-
-    // ================= BUTTON =================
-
+    // BUTTON 
     JPanel bottom =
             new JPanel(
                     new FlowLayout(
                             FlowLayout.CENTER));
-
     bottom.setBackground(BG);
-
 
     JButton done =
             new JButton("DONE");
 
     done.setBackground(PURPLE);
-
     done.setForeground(WHITE);
-
     done.setFocusPainted(false);
-
     done.setBorderPainted(false);
-
     done.setFont(
             new Font(
                     "SansSerif",
                     Font.BOLD,
                     12));
-
     done.setCursor(
             new Cursor(
                     Cursor.HAND_CURSOR));
-
-
     done.addActionListener(
             e -> successDialog.dispose());
 
-
     bottom.add(done);
-
-
     main.add(
             bottom,
             BorderLayout.SOUTH);
-
-
     successDialog.setContentPane(main);
-
     successDialog.setVisible(true);
 }
-    // =========================================================
+    
     // CHECKOUT
-    // =========================================================
-
     private void checkout() {
-
         if (cart.isEmpty()) {
-
             JOptionPane.showMessageDialog(
                     this,
                     "Your cart is empty.",
@@ -2855,7 +2613,6 @@ dialog.dispose();
         if (method == null) {
             return;
         }
-
         Order order =
                 new Order(
                         "ORD"
@@ -2875,9 +2632,7 @@ dialog.dispose();
                         method);
 
         try {
-
             payment.processPayment();
-
             for (CartItem item :
                     order.getItems()) {
 
@@ -2885,71 +2640,52 @@ dialog.dispose();
                         item.getProduct(),
                         item.getQuantity());
             }
-
             order.setStatus(
                     "Confirmed");
-
             storeService.addOrder(order);
-
             Receipt receipt =
                     new Receipt(order);
 
             cart.clear();
-
             updateCartBadge();
-
             refreshProducts();
-
             updateHomeStats();
-
             JOptionPane.showMessageDialog(
                     this,
                     receipt.generateReceipt(),
                     "Order Confirmed!",
                     JOptionPane.INFORMATION_MESSAGE);
-
             showPage("ORDERS");
 
         } catch (InvalidPaymentException | OutOfStockException ex) {
-
             JOptionPane.showMessageDialog(
                     this,
                     ex.getMessage());
-
         }
     }
 
-    // =========================================================
     // UI UPDATES
-    // =========================================================
-
     private void updateCartBadge() {
-
         cartBadge.setText(
                 String.valueOf(
                         cart.getTotalItems()));
 
         updateHomeStats();
     }
-
     private void updateHomeStats() {
 
         if (homeProductCount != null) {
-
             homeProductCount.setText(
                     String.valueOf(
                             storeService
                                     .getProducts()
                                     .size()));
         }
-
         if (homeCartCount != null) {
-
             homeCartCount.setText(
                     String.valueOf(
                             cart.getTotalItems()));
         }
-
         if (homeOrderCount != null) {
 
             homeOrderCount.setText(
@@ -2960,70 +2696,49 @@ dialog.dispose();
         }
     }
 
-    // =========================================================
     // NAVIGATION
-    // =========================================================
-
     private void showPage(
             String page) {
 
         if (page.equals("SHOP")) {
             refreshProducts();
         }
-
         if (page.equals("CART")) {
-
             contentPanel.remove(2);
-
             contentPanel.add(
                     createCartPage(),
                     "CART",
                     2);
         }
-
         if (page.equals("ORDERS")) {
-
             contentPanel.remove(3);
-
             contentPanel.add(
                     createOrdersPage(),
                     "ORDERS",
                     3);
         }
-
         contentPanel.revalidate();
         contentPanel.repaint();
-
         cardLayout.show(
                 contentPanel,
                 page);
     }
-
     private void showHome() {
-
         updateHomeStats();
-
         cardLayout.show(
                 contentPanel,
                 "HOME");
     }
 
-    // =========================================================
     // BUTTON STYLES
-    // =========================================================
-
     private JButton createPrimaryButton(
             String text) {
-
         JButton button =
                 new JButton(text);
 
         button.setBackground(PURPLE);
-
         button.setForeground(WHITE);
-
         button.setFocusPainted(false);
-
         button.setFont(
                 new Font(
                         "SansSerif",
@@ -3033,11 +2748,9 @@ dialog.dispose();
         button.setBorder(
                 BorderFactory.createEmptyBorder(
                         10, 18, 10, 18));
-
         button.setCursor(
                 new Cursor(
                         Cursor.HAND_CURSOR));
-
         return button;
     }
 
@@ -3046,14 +2759,10 @@ dialog.dispose();
 
         JButton button =
                 new JButton(text);
-
         button.setBackground(BG);
-
         button.setForeground(
                 PURPLE_LIGHT);
-
         button.setFocusPainted(false);
-
         button.setBorder(null);
 
         button.setFont(
@@ -3061,18 +2770,14 @@ dialog.dispose();
                         "SansSerif",
                         Font.BOLD,
                         12));
-
         button.setCursor(
                 new Cursor(
                         Cursor.HAND_CURSOR));
 
         return button;
     }
-
-    // =========================================================
+    
     // MAIN
-    // =========================================================
-
     public static void main(
             String[] args) {
 
