@@ -133,7 +133,7 @@ The bin folder contains compiled .class files and is excluded from GitHub using 
 | **VS Code** | Development and coding environment |
 | **Git & GitHub** | Version control and project management |
 
-## ▶️ How to Run
+## How to Run
 ### Prerequisites
 
 Make sure you have:
@@ -145,10 +145,10 @@ Make sure you have:
 ### Run in VS Code
 
 1. Clone or download the project from GitHub.
-2. Open the `ECommerceDark` folder in VS Code.
+2. Open the `ECommerce` folder in VS Code.
 3. Open the `src` folder.
 4. Open `ECommerceApp.java`.
-5. Click the **Run ▶** button in VS Code.
+5. Click the **Run** button in VS Code.
 
 ### Run Using Terminal
 
