@@ -1,5 +1,5 @@
 # CloudExify-Project-4
-# E-Commerce Dark
+# E-Commerce | NOVA
 
 A modern **Java-based E-Commerce application** built using **Java Swing**.  
 The project provides a simple and interactive shopping experience with a dark-themed graphical user interface.
@@ -8,7 +8,7 @@ The project provides a simple and interactive shopping experience with a dark-th
 
 ## Project Overview
 
-**E-Commerce Dark** is a desktop-based e-commerce application developed in Java. It allows customers to browse products, search and filter products by category, add items to a shopping cart, and place orders through a checkout process.
+**E-Commerce | NOVA** is a desktop based e-commerce application developed in Java. It allows customers to browse products, search and filter products by category, add items to a shopping cart, and place orders through a checkout process.
 
 The application focuses on combining **Object-Oriented Programming concepts** with a modern and user-friendly GUI.
 
@@ -132,8 +132,8 @@ The bin folder contains compiled .class files and is excluded from GitHub using 
 | **Exception Handling** | Handling errors such as invalid payments and insufficient stock |
 | **VS Code** | Development and coding environment |
 | **Git & GitHub** | Version control and project management |
-## ▶️ How to Run
 
+## ▶️ How to Run
 ### Prerequisites
 
 Make sure you have:
