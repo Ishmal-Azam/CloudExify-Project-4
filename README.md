@@ -203,7 +203,7 @@ The project can be further improved by adding:
 - Sales and order reports
 - Cloud-based data storage
 
-# Dashboard
+# Homepage
 <img width="1365" height="727" alt="dashboard" src="https://github.com/user-attachments/assets/0c47e744-7f03-4b89-8d6c-3791f2f585b8" />
 
 # Shop
