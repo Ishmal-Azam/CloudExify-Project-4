@@ -229,5 +229,5 @@ The project can be further improved by adding:
 <img width="1365" height="724" alt="your order" src="https://github.com/user-attachments/assets/248f0467-7589-4d85-9fcc-cdb94a8ff893" />
 
 ## After order home page updates
-<img width="1096" height="408" alt="dashboard update" src="https://github.com/user-attachments/assets/6c7a49fd-4571-42d6-a83d-f8fca09c1a3c" />
+<img width="1090" height="356" alt="update" src="https://github.com/user-attachments/assets/932f9481-93bd-4846-bead-b0f178ca95ee" />
 
